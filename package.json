@@ -17,7 +17,7 @@
     "@playwright/test": "^1.61.0",
     "@types/node": "^25.9.3",
     "allure-playwright": "^3.10.0",
-    "ortoni-report": "^4.10.0",
+    "ortoni-report": "^2.0.7",
     "playwright": "^1.61.0"
   }
 }
