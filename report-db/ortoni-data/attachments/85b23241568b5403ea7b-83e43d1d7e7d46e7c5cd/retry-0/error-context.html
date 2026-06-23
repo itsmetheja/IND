@@ -1,0 +1,312 @@
+<h1>Instructions</h1>
+<ul>
+<li>Following Playwright test failed.</li>
+<li>Explain why, be concise, respect Playwright best practices.</li>
+<li>Provide a snippet of code with the fix, if possible.</li>
+</ul>
+<h1>Test info</h1>
+<ul>
+<li>Name: tests\automation-practice\autocomplete.spec.ts &gt;&gt; AutomationPractice - Autocomplete &gt;&gt; Autocomplete suggestions and selection</li>
+<li>Location: tests\automation-practice\autocomplete.spec.ts:7:7</li>
+</ul>
+<h1>Error details</h1>
+<pre><code>Error: expect(locator).toBeVisible() failed
+
+Locator: locator(&#39;.ui-menu-item div&#39;).first()
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect &quot;toBeVisible&quot; with timeout 5000ms
+  - waiting for locator(&#39;.ui-menu-item div&#39;).first()
+</code></pre>
+<pre><code class="language-yaml">- banner:
+  - link:
+    - /url: https://www.rahulshettyacademy.com/
+    - img
+  - link &quot;Get Shortlisted by Recruiters - Take QA Skill Assessments on TechSmartHire&quot;:
+    - /url: https://techsmarthire.com/
+  - link &quot;Home&quot;:
+    - /url: https://www.rahulshettyacademy.com/
+    - button &quot;Home&quot;
+  - button &quot;Practice&quot;
+  - button &quot;Login&quot;
+  - button &quot;Signup&quot;
+- heading &quot;Practice Page&quot; [level=1]
+- group &quot;Radio Button Example&quot;:
+  - text: Radio Button Example
+  - radio
+  - text: Radio1
+  - radio
+  - text: Radio2
+  - radio
+  - text: Radio3
+- group &quot;Suggession Class Example&quot;:
+  - text: Suggession Class Example
+  - textbox &quot;Type to Select Countries&quot;: indra
+- group &quot;Dropdown Example&quot;:
+  - text: Dropdown Example
+  - combobox:
+    - option &quot;Select&quot; [selected]
+    - option &quot;Option1&quot;
+    - option &quot;Option2&quot;
+    - option &quot;Option3&quot;
+- group &quot;Checkbox Example&quot;:
+  - text: Checkbox Example
+  - checkbox
+  - text: Option1
+  - checkbox
+  - text: Option2
+  - checkbox
+  - text: Option3
+- group &quot;Switch Window Example&quot;:
+  - text: Switch Window Example
+  - button &quot;Open Window&quot;
+- group &quot;Switch Tab Example&quot;:
+  - text: Switch Tab Example
+  - link &quot;Open Tab&quot;:
+    - /url: https://www.qaclickacademy.com
+- group &quot;Switch To Alert Example&quot;:
+  - text: Switch To Alert Example
+  - textbox &quot;Enter Your Name&quot;
+  - button &quot;Alert&quot;
+  - button &quot;Confirm&quot;
+- group &quot;Web Table Example&quot;:
+  - text: Web Table Example
+  - table:
+    - rowgroup:
+      - row &quot;Instructor Course Price&quot;:
+        - columnheader &quot;Instructor&quot;
+        - columnheader &quot;Course&quot;
+        - columnheader &quot;Price&quot;
+      - row &quot;Rahul Shetty Selenium Webdriver with Java Basics + Advanced + Interview Guide 30&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Selenium Webdriver with Java Basics + Advanced + Interview Guide&quot;
+        - cell &quot;30&quot;
+      - row &quot;Rahul Shetty Learn SQL in Practical + Database Testing from Scratch 25&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Learn SQL in Practical + Database Testing from Scratch&quot;
+        - cell &quot;25&quot;
+      - row &quot;Rahul Shetty Appium (Selenium) - Mobile Automation Testing from Scratch 30&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Appium (Selenium) - Mobile Automation Testing from Scratch&quot;
+        - cell &quot;30&quot;
+      - row &quot;Rahul Shetty WebSecurity Testing for Beginners-QA knowledge to next level 20&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;WebSecurity Testing for Beginners-QA knowledge to next level&quot;
+        - cell &quot;20&quot;
+      - row &quot;Rahul Shetty Learn JMETER from Scratch - (Performance + Load) Testing Tool 25&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Learn JMETER from Scratch - (Performance + Load) Testing Tool&quot;
+        - cell &quot;25&quot;
+      - row &quot;Rahul Shetty WebServices / REST API Testing with SoapUI 35&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;WebServices / REST API Testing with SoapUI&quot;
+        - cell &quot;35&quot;
+      - row &quot;Rahul Shetty QA Expert Course :Software Testing + Bugzilla + SQL + Agile 25&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;QA Expert Course :Software Testing + Bugzilla + SQL + Agile&quot;
+        - cell &quot;25&quot;
+      - row &quot;Rahul Shetty Master Selenium Automation in simple Python Language 25&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Master Selenium Automation in simple Python Language&quot;
+        - cell &quot;25&quot;
+      - row &quot;Rahul Shetty Advanced Selenium Framework Pageobject, TestNG, Maven, Jenkins,C 20&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Advanced Selenium Framework Pageobject, TestNG, Maven, Jenkins,C&quot;
+        - cell &quot;20&quot;
+      - row &quot;Rahul Shetty Write effective QA Resume that will turn to interview call 0&quot;:
+        - cell &quot;Rahul Shetty&quot;
+        - cell &quot;Write effective QA Resume that will turn to interview call&quot;
+        - cell &quot;0&quot;
+- group &quot;Element Displayed Example&quot;:
+  - text: Element Displayed Example
+  - button &quot;Hide&quot;
+  - button &quot;Show&quot;
+  - textbox &quot;Hide/Show Example&quot;
+- group &quot;Web Table Fixed header&quot;:
+  - text: Web Table Fixed header
+  - table:
+    - rowgroup:
+      - row &quot;Name Position City Amount&quot;:
+        - columnheader &quot;Name&quot;
+        - columnheader &quot;Position&quot;
+        - columnheader &quot;City&quot;
+        - columnheader &quot;Amount&quot;
+    - rowgroup:
+      - row &quot;Alex Engineer Chennai 28&quot;:
+        - cell &quot;Alex&quot;
+        - cell &quot;Engineer&quot;
+        - cell &quot;Chennai&quot;
+        - cell &quot;28&quot;
+      - row &quot;Ben Mechanic Bengaluru 23&quot;:
+        - cell &quot;Ben&quot;
+        - cell &quot;Mechanic&quot;
+        - cell &quot;Bengaluru&quot;
+        - cell &quot;23&quot;
+      - row &quot;Dwayne Manager Kolkata 48&quot;:
+        - cell &quot;Dwayne&quot;
+        - cell &quot;Manager&quot;
+        - cell &quot;Kolkata&quot;
+        - cell &quot;48&quot;
+      - row &quot;Ivory Receptionist Chennai 18&quot;:
+        - cell &quot;Ivory&quot;
+        - cell &quot;Receptionist&quot;
+        - cell &quot;Chennai&quot;
+        - cell &quot;18&quot;
+      - row &quot;Jack Engineer Pune 32&quot;:
+        - cell &quot;Jack&quot;
+        - cell &quot;Engineer&quot;
+        - cell &quot;Pune&quot;
+        - cell &quot;32&quot;
+      - row &quot;Joe Postman Chennai 46&quot;:
+        - cell &quot;Joe&quot;
+        - cell &quot;Postman&quot;
+        - cell &quot;Chennai&quot;
+        - cell &quot;46&quot;
+      - row &quot;Raymond Businessman Mumbai 37&quot;:
+        - cell &quot;Raymond&quot;
+        - cell &quot;Businessman&quot;
+        - cell &quot;Mumbai&quot;
+        - cell &quot;37&quot;
+      - row &quot;Ronaldo Sportsman Chennai 31&quot;:
+        - cell &quot;Ronaldo&quot;
+        - cell &quot;Sportsman&quot;
+        - cell &quot;Chennai&quot;
+        - cell &quot;31&quot;
+      - row &quot;Smith Cricketer Delhi 33&quot;:
+        - cell &quot;Smith&quot;
+        - cell &quot;Cricketer&quot;
+        - cell &quot;Delhi&quot;
+        - cell &quot;33&quot;
+  - text: &quot;Total Amount Collected: 296&quot;
+- group &quot;Mouse Hover Example&quot;:
+  - text: Mouse Hover Example
+  - button &quot;Mouse Hover&quot;
+- group &quot;iFrame Example&quot;:
+  - text: iFrame Example
+  - iframe
+- table:
+  - rowgroup:
+    - row &quot;Discount Coupons REST API SoapUI Appium JMeter Latest News Broken Link Dummy Content for Testing. Dummy Content for Testing. Dummy Content for Testing. Contact info Dummy Content for Testing. Dummy Content for Testing. Dummy Content for Testing. Dummy Content for Testing. Social Media Facebook Twitter Google+ Youtube&quot;:
+      - cell &quot;Discount Coupons REST API SoapUI Appium JMeter&quot;:
+        - list:
+          - listitem:
+            - heading &quot;Discount Coupons&quot; [level=3]:
+              - link &quot;Discount Coupons&quot;:
+                - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;REST API&quot;:
+              - /url: http://www.restapitutorial.com/
+          - listitem:
+            - link &quot;SoapUI&quot;:
+              - /url: https://www.soapui.org/
+          - listitem:
+            - link &quot;Appium&quot;:
+              - /url: https://courses.rahulshettyacademy.com/p/appium-tutorial
+          - listitem:
+            - link &quot;JMeter&quot;:
+              - /url: https://jmeter.apache.org/
+      - cell &quot;Latest News Broken Link Dummy Content for Testing. Dummy Content for Testing. Dummy Content for Testing.&quot;:
+        - list:
+          - listitem:
+            - heading &quot;Latest News&quot; [level=3]:
+              - link &quot;Latest News&quot;:
+                - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Broken Link&quot;:
+              - /url: https://rahulshettyacademy.com/brokenlink
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+      - cell &quot;Contact info Dummy Content for Testing. Dummy Content for Testing. Dummy Content for Testing. Dummy Content for Testing.&quot;:
+        - list:
+          - listitem:
+            - heading &quot;Contact info&quot; [level=3]:
+              - link &quot;Contact info&quot;:
+                - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Dummy Content for Testing.&quot;:
+              - /url: &quot;#&quot;
+      - cell &quot;Social Media Facebook Twitter Google+ Youtube&quot;:
+        - list:
+          - listitem:
+            - heading &quot;Social Media&quot; [level=3]:
+              - link &quot;Social Media&quot;:
+                - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Facebook&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Twitter&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Google+&quot;:
+              - /url: &quot;#&quot;
+          - listitem:
+            - link &quot;Youtube&quot;:
+              - /url: &quot;#&quot;
+- text: © 2019 Powered by
+- strong:
+  - link &quot;Medianh Consulting&quot;:
+    - /url: http://www.medianhconsulting.com
+- status: No search results.
+</code></pre>
+<h1>Test source</h1>
+<pre><code class="language-ts">  1  | // spec: specs/automation-practice.test.plan.md
+  2  | // seed: tests/seed.spec.ts
+  3  | 
+  4  | import { test, expect } from &#39;@playwright/test&#39;;
+  5  | 
+  6  | test.describe(&#39;AutomationPractice - Autocomplete&#39;, () =&gt; {
+  7  |   test(&#39;Autocomplete suggestions and selection&#39;, async ({ page }) =&gt; {
+  8  |     await page.goto(&#39;https://rahulshettyacademy.com/AutomationPractice/&#39;);
+  9  |     await expect(page).toHaveTitle(/Practice Page/);
+  10 | 
+  11 |     const ac = page.locator(&#39;#autocomplete&#39;);
+  12 |     await expect(ac).toBeVisible();
+  13 | 
+  14 |     // Type partial text and choose suggestion
+  15 |     await ac.fill(&#39;indra&#39;);
+  16 |     const suggestions = page.locator(&#39;.ui-menu-item div&#39;);
+&gt; 17 |     await expect(suggestions.first()).toBeVisible();
+     |                                       ^ Error: expect(locator).toBeVisible() failed
+  18 | 
+  19 |     // Try to select &#39;India&#39; if present; otherwise capture the clicked suggestion text
+  20 |     const india = suggestions.filter({ hasText: &#39;India&#39; }).first();
+  21 |     if (await india.count() &gt; 0) {
+  22 |       const txt = await india.innerText();
+  23 |       await india.click();
+  24 |       await expect(ac).toHaveValue(txt);
+  25 |     } else {
+  26 |       // Fallback: select first suggestion and verify value matches the suggestion text
+  27 |       const first = suggestions.first();
+  28 |       const txt = await first.innerText();
+  29 |       await first.click();
+  30 |       await expect(ac).toHaveValue(txt);
+  31 |     }
+  32 | 
+  33 |     // Negative case: random text should not match any suggestion items
+  34 |     await ac.fill(&#39;zzzxxyy&#39;);
+  35 |     const matches = page.locator(&#39;.ui-menu-item&#39;).filter({ hasText: &#39;zzzxxyy&#39; });
+  36 |     expect(await matches.count()).toBe(0);
+  37 |   });
+  38 | });
+  39 | 
+</code></pre>

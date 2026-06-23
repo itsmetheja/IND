@@ -1,0 +1,49 @@
+<h1>Instructions</h1>
+<ul>
+<li>Following Playwright test failed.</li>
+<li>Explain why, be concise, respect Playwright best practices.</li>
+<li>Provide a snippet of code with the fix, if possible.</li>
+</ul>
+<h1>Test info</h1>
+<ul>
+<li>Name: tests\automation-practice\mousehover.spec.ts &gt;&gt; AutomationPractice - Mouse Hover &gt;&gt; Mouse hover menu and actions</li>
+<li>Location: tests\automation-practice\mousehover.spec.ts:7:7</li>
+</ul>
+<h1>Error details</h1>
+<pre><code>Test timeout of 30000ms exceeded.
+</code></pre>
+<pre><code>Error: page.goto: Test timeout of 30000ms exceeded.
+Call log:
+  - navigating to &quot;https://rahulshettyacademy.com/AutomationPractice/&quot;, waiting until &quot;load&quot;
+</code></pre>
+<h1>Test source</h1>
+<pre><code class="language-ts">  1  | // spec: specs/automation-practice.test.plan.md
+  2  | // seed: tests/seed.spec.ts
+  3  | 
+  4  | import { test, expect } from &#39;@playwright/test&#39;;
+  5  | 
+  6  | test.describe(&#39;AutomationPractice - Mouse Hover&#39;, () =&gt; {
+  7  |   test(&#39;Mouse hover menu and actions&#39;, async ({ page }) =&gt; {
+  8  |     // 1. Navigate to the AutomationPractice homepage
+&gt; 9  |     await page.goto(&#39;https://rahulshettyacademy.com/AutomationPractice/&#39;);
+     |                ^ Error: page.goto: Test timeout of 30000ms exceeded.
+  10 |     await expect(page).toHaveTitle(/Practice Page/);
+  11 | 
+  12 |     // 2. Locate hover trigger button &#39;#mousehover&#39;.
+  13 |     const hoverBtn = page.locator(&#39;#mousehover&#39;);
+  14 |     await expect(hoverBtn).toBeVisible();
+  15 | 
+  16 |     // 3. Perform mouse hover on &#39;#mousehover&#39; to reveal hidden menu
+  17 |     await hoverBtn.hover();
+  18 |     const topLink = page.locator(&#39;a[href=&quot;#top&quot;]&#39;);
+  19 | 
+  20 |     // Wait for the menu link to exist and click it. Use force click if hover is flaky.
+  21 |     await expect(topLink).toHaveCount(1);
+  22 |     await topLink.click({ force: true });
+  23 | 
+  24 |     // 4. Verify clicking &#39;Top&#39; navigates to &#39;#top&#39; (page scrolled to top)
+  25 |     expect(new URL(page.url()).hash).toBe(&#39;#top&#39;);
+  26 |   });
+  27 | });
+  28 | 
+</code></pre>

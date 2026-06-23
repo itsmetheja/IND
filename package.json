@@ -1,0 +1,23 @@
+{
+  "name": "project2--brand-new-event-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "AutomationPractice": "npx playwright test tests/automation-practice",
+    "Nish": "npx playwright test tests/automation-practice --config playwright.config.copy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@azure/identity": "^4.13.1",
+    "@azure/playwright": "^1.1.6",
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^25.9.3",
+    "allure-playwright": "^3.10.0",
+    "ortoni-report": "^4.10.0",
+    "playwright": "^1.61.0"
+  }
+}

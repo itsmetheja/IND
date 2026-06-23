@@ -1,0 +1,12 @@
+[
+  'FestivalFeaturedDilli Diwali MelaTue, 20 OctPragati Maidan Exhibition Grounds, Delhi$3009993 seats availableBook Now',
+  'ConcertFeaturedHollywood Monsoon Night — Los AngelesSun, 12 JulDome, NSCI SVP Stadium, Worli, Los Angeles$2,5003000 seats availableBook Now',
+  'ConferenceFeaturedWorld Tech SummitSat, 18 AprHyderabad, Hitech city, Hyderabad$1,500500 seats availableBook Now',
+  'ConferenceTest Event 1781595579722Tue, 16 Junhello YES TO TEST, Hyderabad$8099 seats availableBook Now'
+]
+4
+D-DR3SFU
+Dilli Diwali Mela
+first character of booking ref equals first character of event title
+Eligible for refund. Single-ticket bookings qualify for a full refund.
+Assertion Passed : Single-ticket bookings qualify for a full refund

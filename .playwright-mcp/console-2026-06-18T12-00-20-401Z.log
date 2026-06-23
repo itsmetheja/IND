@@ -1,0 +1,3 @@
+[    3136ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://legacy.rahulshettyacademy.com/api/course:0
+[    3137ms] [LOG] error @ https://legacy.rahulshettyacademy.com/:1020
+[    3137ms] [LOG] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ https://legacy.rahulshettyacademy.com/:1021
